@@ -5,70 +5,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/styles.css">
+  <title>Document</title>
 
-  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="./js/custom.js"></script>
-  <script>
-    $(document).ready(function () {
-      main();
-    });
-
-    $(window).on("load", function () {
-      main();
-    });
-  </script>
-
-  <script src="./js/svg-inject.min.js"></script>
-
+  <link rel="stylesheet" href="./css/custom.css">
   <link rel="shortcut icon" href="#">
 </head>
 
 <body>
 
-  <h2>Dados de minas gerais</h2>
-  <section id="dashboard">
-    <div class="map-info-container">
-      <div id="zone-info">
-        <div class="zone-info-item">
-          <p class="label">Macrorregião</p>
-          <p class="info" id="zone-name">- - -</p>
-        </div>
+  <h2>Dados Covid Minas Gerais</h2>
 
-        <div class="zone-info-item">
-          <p class="label">Classificação de risco</p>
-          <p class="info" id="zone-risk">- - -</p>
-        </div>
-
-        <div class="zone-info-item">
-          <p class="label">Número de mortes</p>
-          <p class="info" id="zone-deaths">- - -</p>
-        </div>
-
-        <div class="zone-info-item">
-          <p class="label">Número de casos</p>
-          <p class="info" id="zone-cases">- - -</p>
-        </div>
+  <div class="dashboard-container">
+    <div class="image-container">
+      <object data="./assets/minas.svg" type="image/svg+xml" id="mg-map"></object>
+    </div>
+    <div class="info-container">
+      <div class="info-item">
+        <p class="label">Macrorregião</p>
+        <p class="info" id="zone-name">- - -</p>
       </div>
 
+      <div class="info-item">
+        <p class="label">Classificação de risco</p>
+        <p class="info" id="zone-risk">- - -</p>
+      </div>
+
+      <div class="info-item">
+        <p class="label">Número de mortes</p>
+        <p class="info" id="zone-deaths">- - -</p>
+      </div>
+
+      <div class="info-item">
+        <p class="label">Número de casos</p>
+        <p class="info" id="zone-cases">- - -</p>
+      </div>
     </div>
+  </div>
 
-    <div class="map-container">
-      <img src="./assets/minas.svg" onload="SVGInject(this)" />
-    </div>
-  </section>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-
+  <script src="./js/custom.js"></script>
 </body>
 
 </html>
